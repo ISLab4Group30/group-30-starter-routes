@@ -43,6 +43,10 @@ class Quotes extends CI_Model {
         return $this->data[$last_index];
     }
 
+	public function topMiddle() {
+ 		return $this->data[1];
+ 	}
+
 	// retrieve a single quote
 	public function get($which)
 	{
