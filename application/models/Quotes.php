@@ -31,6 +31,18 @@ class Quotes extends CI_Model {
 		parent::__construct();
 	}
 
+    // retrieve first quote
+    public function first() {
+        return $this->data[0];
+    }
+    // retrieve last quote
+    public function last() {
+        end($this->data);
+        $last_index = key($this->data);
+
+        return $this->data[$last_index];
+    }
+
 	// retrieve a single quote
 	public function get($which)
 	{
